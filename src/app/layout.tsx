@@ -1,10 +1,31 @@
 import type { Metadata } from "next";
+import { Inter, Space_Grotesk, Vazirmatn } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+// Persian / Arabic-script face, applied when the site is switched to فارسی.
+const vazirmatn = Vazirmatn({
+  subsets: ["arabic"],
+  variable: "--font-fa",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Lumian | Software Development Company",
+  title: "Lumian — Software & Data Studio",
   description:
-    "Lumian designs and builds scalable software products, intelligent platforms, and premium digital experiences.",
+    "Lumian is a software & data studio. We build fast websites and apps, turn raw data into insight, and run reliable web-scraping & automation — end to end.",
 };
 
 export default function RootLayout({
@@ -13,7 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${inter.variable} ${spaceGrotesk.variable} ${vazirmatn.variable}`}
+    >
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}
       </body>

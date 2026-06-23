@@ -13,3 +13,11 @@ export type ProjectItem = {
   description: string;
   tags?: string[];
 };
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  initials: string;
+  /** Tailwind gradient stops, e.g. "from-primary to-secondary" */
+  accent: string;
+};

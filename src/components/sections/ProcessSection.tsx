@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal from "@/components/ui/Reveal";
 
 const steps = [
   {
@@ -21,24 +22,32 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="py-24">
+    <section id="process" className="relative py-28">
       <Container>
-        <SectionHeading
-          eyebrow="How we work"
-          title="A process built for results"
-          description="Three focused phases that turn vision into reliable, scalable software."
-        />
-        <div className="grid gap-8 sm:grid-cols-3">
+        <Reveal>
+          <SectionHeading
+            eyebrow="How we work"
+            title="A process built for results"
+            description="Three focused phases that turn vision into reliable, scalable software."
+          />
+        </Reveal>
+        <div className="relative grid gap-8 sm:grid-cols-3">
+          {/* connecting line */}
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-white/10 to-transparent sm:block" />
           {steps.map((step, index) => (
-            <div key={step.title} className="relative">
-              <span className="mb-4 block text-sm font-medium text-primary">
-                0{index + 1}
-              </span>
-              <h3 className="text-xl font-semibold text-foreground">
-                {step.title}
-              </h3>
-              <p className="mt-3 text-muted">{step.description}</p>
-            </div>
+            <Reveal key={step.title} delay={index * 0.12}>
+              <div className="relative">
+                <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-surface font-display text-sm font-semibold text-primary">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-6 font-display text-xl font-semibold text-foreground">
+                  {step.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-muted">
+                  {step.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </Container>
