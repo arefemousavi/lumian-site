@@ -7,7 +7,7 @@ import { useLang } from "@/i18n/LanguageProvider";
 const members = [
   { name: "Arefe Mousavi", initials: "AM" },
   { name: "Aref Pourhashemi", initials: "AP" },
-  { name: "Mahdie Safar", initials: "MS" },
+  { name: "Mahdie Saffar", initials: "MS" },
   { name: "Mehran Hatami", initials: "MH" },
   { name: "Shirin Mohebi", initials: "SM" },
   { name: "Reyhane Firouzi", initials: "RF" },

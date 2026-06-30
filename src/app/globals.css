@@ -61,18 +61,16 @@ html {
   max-width: 100%;
 }
 
-/* Persian: route every font token through Vazirmatn so headings + body
-   (which reference --font-display / --font-sans) all render correctly. */
-html[lang="fa"] {
-  --font-sans: var(--font-fa);
-  --font-display: var(--font-fa);
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  /* IRANSansX is the primary face site-wide (it covers Latin + Persian);
+     Inter / Space Grotesk remain as fallbacks. Headings that reference
+     var(--font-display) below are routed to it too. */
+  --font-sans: var(--font-fa);
+  --font-display: var(--font-fa);
+  font-family: var(--font-fa), var(--font-sans), system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

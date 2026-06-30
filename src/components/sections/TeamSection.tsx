@@ -9,7 +9,7 @@ const initials = ["AM", "AP", "MS", "MH", "SM", "RF"];
 const names = [
   "Arefe Mousavi",
   "Aref Pourhashemi",
-  "Mahdie Safar",
+  "Mahdie Saffar",
   "Mehran Hatami",
   "Shirin Mohebi",
   "Reyhane Firouzi",
