@@ -6,7 +6,7 @@ import { useLang } from "@/i18n/LanguageProvider";
 const EMAIL = "lumian.team@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/company/lumian-team/";
 
-const avatars = ["EM", "AM", "SK", "NT", "DA"];
+const avatars = ["AM", "AP", "MS", "MH", "SM", "RF"];
 
 export default function CTASection() {
   const { t } = useLang();

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Vazirmatn } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,9 +16,10 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-// Persian / Arabic-script face, applied when the site is switched to فارسی.
-const vazirmatn = Vazirmatn({
-  subsets: ["arabic"],
+// IRANSansX (variable) — the Persian face, applied when the site is in فارسی.
+const iranSans = localFont({
+  src: "../fonts/IRANSansXV.woff2",
+  weight: "100 900",
   variable: "--font-fa",
   display: "swap",
 });
@@ -36,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${vazirmatn.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${iranSans.variable}`}
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}

@@ -5,13 +5,14 @@ import { motion } from "framer-motion";
 import { useLang } from "@/i18n/LanguageProvider";
 import AnimatedTooltip from "@/components/ui/AnimatedTooltip";
 
-const initials = ["AM", "AP", "MS", "MH", "SM"];
+const initials = ["AM", "AP", "MS", "MH", "SM", "RF"];
 const names = [
   "Arefe Mousavi",
   "Aref Pourhashemi",
   "Mahdie Safar",
   "Mehran Hatami",
   "Shirin Mohebi",
+  "Reyhane Firouzi",
 ];
 
 export default function TeamSection() {

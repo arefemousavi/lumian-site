@@ -10,6 +10,7 @@ const members = [
   { name: "Mahdie Safar", initials: "MS" },
   { name: "Mehran Hatami", initials: "MH" },
   { name: "Shirin Mohebi", initials: "SM" },
+  { name: "Reyhane Firouzi", initials: "RF" },
 ];
 
 export default function TeamRoster() {
