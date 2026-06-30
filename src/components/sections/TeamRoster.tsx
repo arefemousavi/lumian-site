@@ -4,13 +4,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLang } from "@/i18n/LanguageProvider";
 
-// Placeholder names — swap in the real team whenever you like.
 const members = [
-  { name: "Ehsan Mousavi", initials: "EM" },
-  { name: "Aref Mousavi", initials: "AM" },
-  { name: "Sara Karimi", initials: "SK" },
-  { name: "Nima Tehrani", initials: "NT" },
-  { name: "Dorsa Ahmadi", initials: "DA" },
+  { name: "Arefe Mousavi", initials: "AM" },
+  { name: "Aref Pourhashemi", initials: "AP" },
+  { name: "Mahdie Safar", initials: "MS" },
+  { name: "Mehran Hatami", initials: "MH" },
+  { name: "Shirin Mohebi", initials: "SM" },
 ];
 
 export default function TeamRoster() {
